@@ -28,7 +28,7 @@ export default defineConfig({
         items: [
           { text: '目录', link: '/done/readme' },
           { text: '第1期', link: '/done/1' },
-          { text: '第2期', link: '/done/2' }，
+          { text: '第2期', link: '/done/2' },
           { text: '第3期', link: '/done/3' }
         ]
       }
