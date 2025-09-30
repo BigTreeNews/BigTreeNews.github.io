@@ -9,22 +9,33 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: '首页', link: '/' },
+      { text: '关于我们', link: '/about' }
+      {
+        text: '成品',
+        items: [
+          { text: '目录', link: '/done/readme' },
+          { text: "第1期", link: "/done/1/" },
+          { text: "第2期", link: "/done/2/" },
+          { text: "第3期", link: "/done/3/" }
+        ]
+      }
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: '成品',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: '目录', link: '/done/readme' },
+          { text: '第1期', link: '/done/1' },
+          { text: '第2期', link: '/done/2' }，
+          { text: '第3期', link: '/done/3' }
         ]
       }
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/JustJoy122/BTN' }
     ]
   }
 })
