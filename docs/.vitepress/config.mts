@@ -56,7 +56,8 @@ export default defineConfig({
           { text: '第2期', link: '/work/2' },
           { text: '第3期', link: '/work/3' }
         ]
-      }
+      },
+      { text: '关于我们', link: '/about' }
     ],
     //404页面的配置
     notFound: {

@@ -18,15 +18,16 @@ hero:
       link: /about
 
 features:
-  - title: 林业集团主管主办
-    details: 国民统一连续出版物号:RC 52-675 邮发代号:75-01
-  - title: 出刊数量
+  - title: 发行数量
     details: 3期
     link: /work
     linkText: 了解更多
-  - title: 字数
-    details: 很多很多字，由编辑部与人工智能共同完成
+  - title: 字符数量
+    details: 很多很多字，全部由编辑部成员完成
   - title: 图片数量
-    details: 很多很多张，来源涵盖人民教育出版社、纪检委官方媒体、自主拍摄
+    details: 很多很多张，来源涵盖人民教育出版社、官方媒体、自主拍摄
 ---
+::: warning 最新消息
+在金主 - 红枣酸奶的无偿支持下，《大树报》从理论到实践，从电子版到纸质版，实现质的飞跃，热烈庆祝
 
+:::
