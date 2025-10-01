@@ -4,7 +4,7 @@ layout: home
 
 hero:
   image:
-      src: ./logo.png
+      src: https://raw.githubusercontent.com/JustJoy122/BTN/refs/heads/main/docs/logo.png
       alt: "大树报"
   name: "大树网"
   text: "大树报官方网站"
