@@ -10,26 +10,26 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { text: '关于我们', link: '/about' },
       {
-        text: '成品',
+        text: '往期',
         items: [
-          { text: '目录', link: '/done/readme' },
-          { text: "第1期", link: "/done/1/" },
-          { text: "第2期", link: "/done/2/" },
-          { text: "第3期", link: "/done/3/" }
+          { text: '目录', link: '/work' },
+          { text: "第1期", link: "/work/1/" },
+          { text: "第2期", link: "/work/2/" },
+          { text: "第3期", link: "/work/3/" }
         ]
-      }
+      },
+      { text: '关于', link: '/about' }
     ],
 
     sidebar: [
       {
-        text: '成品',
+        text: '往期',
         items: [
-          { text: '目录', link: '/done/readme' },
-          { text: '第1期', link: '/done/1' },
-          { text: '第2期', link: '/done/2' },
-          { text: '第3期', link: '/done/3' }
+          { text: '目录', link: '/work' },
+          { text: '第1期', link: '/work/1' },
+          { text: '第2期', link: '/work/2' },
+          { text: '第3期', link: '/work/3' }
         ]
       }
     ],
