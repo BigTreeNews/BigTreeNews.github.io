@@ -7,8 +7,32 @@ export default defineConfig({
   base,
   title: "大树网",
   description: "大树报官方网站",
+  //设置为中文，相当于html标签加lang="zh-CN"
+  lang: "zh-CN",
+  locales: {
+    "/": {
+      label: "简体中文",
+      lang: "zh-CN",
+    },
+  },
+  //主题配置
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    //头上角要主题切换的文字 Appearance
+    darkModeSwitchLabel: "切换主题",
+    // 文章翻页
+    docFooter: {
+      prev: "上一篇", //Next page
+      next: "下一篇", //Previous page
+    },
+    //当前页面 On this page
+    outlineTitle: "页面内容",
+
+    // 返回顶部 Return to top
+    returnToTopLabel: "返回顶部",
+
+    // 菜单  Menu
+    sidebarMenuLabel: "菜单",
     nav: [
       { text: '首页', link: '/' },
       {
@@ -34,7 +58,12 @@ export default defineConfig({
         ]
       }
     ],
-
+    //404页面的配置
+    notFound: {
+      title: "页面未找到",
+      quote: "哎呀，好像不小心迷路了呢",
+      linkText: "返回首页",
+    },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/JustJoy122/BTN' }
     ]
