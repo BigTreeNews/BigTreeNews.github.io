@@ -39,7 +39,6 @@ export default defineConfig({
       {
         text: '往期',
         items: [
-          { text: '目录', link: '/work' },
           { text: "第1期", link: "/work/1/" },
           { text: "第2期", link: "/work/2/" },
           { text: "第3期", link: "/work/3/" }
@@ -58,7 +57,13 @@ export default defineConfig({
           { text: '第3期', link: '/work/3' }
         ]
       },
-      { text: '关于我们', link: '/about' }
+      {
+        text: '关于',
+        items: [
+          { text: '我们', link: '/about' },
+          { text: '网站', link: '/aboutweb' }
+        ]
+      }
     ],
     //404页面的配置
     notFound: {
