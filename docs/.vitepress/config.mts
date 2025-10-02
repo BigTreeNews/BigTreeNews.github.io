@@ -4,6 +4,7 @@ const base = "/BTN/";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   ignoreDeadLinks: true,
+  cleanUrls: true,
   base,
   title: "大树网",
   description: "大树报官方网站",
