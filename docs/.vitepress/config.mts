@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-const base = '/BTN/';
+const base = '/';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -70,6 +70,7 @@ export default defineConfig({
       {
         text: '法规',
         items: [
+          { text: '目录', link: '/law' },
           { text: '国法', link: '/law/nation' },
           { text: '校规', link: '/law/school' }
         ]
@@ -89,7 +90,7 @@ export default defineConfig({
       linkText: '返回首页',
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/JustJoy122/BTN' }
+      { icon: 'github', link: 'https://github.com/BigTreeNews/BigTreeNews.github.io' }
     ]
   }
 })
