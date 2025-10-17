@@ -1,6 +1,6 @@
 # 关于网站
 ## 鸣谢
-本网站使用 [Vitepress](https://github.com/vuejs/vitepress) 搭建
+本网站使用 [Vitepress](https://vitepress.dev/zh/) 搭建
 
 本网站部署于 [Github Pages](https://docs.github.com/zh/pages)
 ## 更新日志
