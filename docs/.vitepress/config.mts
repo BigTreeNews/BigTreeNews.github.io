@@ -1,3 +1,4 @@
+import timeline from "vitepress-markdown-timeline";
 import { defineConfig } from 'vitepress'
 const base = '/';
 
@@ -15,6 +16,11 @@ export default defineConfig({
     '/': {
       label: '简体中文',
       lang: 'zh-CN',
+    },
+  },
+  markdown: {
+    config: (md) => {
+      md.use(timeline);
     },
   },
   //主题配置

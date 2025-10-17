@@ -14,5 +14,8 @@
   "license": "ISC",
   "devDependencies": {
     "vitepress": "^1.6.4"
+  },
+  "dependencies": {
+    "vitepress-markdown-timeline": "^1.2.2"
   }
 }
