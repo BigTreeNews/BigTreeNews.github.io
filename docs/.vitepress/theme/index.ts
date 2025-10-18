@@ -1,4 +1,3 @@
-// .vitepress/theme/index.ts or .vitepress/theme/index.js
 import Theme from "vitepress/theme"
 
 // 只需添加以下一行代码，引入时间线样式

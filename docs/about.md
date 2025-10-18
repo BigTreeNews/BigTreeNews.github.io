@@ -11,7 +11,7 @@ import {
 // 定义核心团队成员
 const coreMembers = [
   {
-    avatar: 'https://www.github.com/Singo-Next-Door.png',
+    avatar: 'https://github.com/Singo-Next-Door.png',
     name: '星火Singo',
     title: '主编，创始人，记者',
     links: [
@@ -19,7 +19,7 @@ const coreMembers = [
     ]
   },
   {
-    avatar: 'https://www.github.com/JustJoy122.png',
+    avatar: 'https://github.com/JustJoy122.png',
     name: '周围',
     title: '审校，版面设计，网站维护',
     links: [
@@ -49,40 +49,40 @@ const coreMembers = [
     ]
   },
   {
-    avatar: '/BTN.png',
+    avatar: '/NF.jpg',
     name: '诺夫',
     title: '记者，连载作家',
     links: [
     ]
   },
   {
-    avatar: '/BTN.png',
+    avatar: 'https://github.com/BigTreeNews.png',
     name: '民國第一文書',
     title: '记者，书法家',
     links: [
     ]
   },
   {
-    avatar: '/BTN.png',
+    avatar: 'https://github.com/BigTreeNews.png',
     name: 'Cutry3',
     title: '记者',
     links: [
     ]
   },
  {
-    avatar: '/BTN.png',
+    avatar: '/LT.jpg',
     name: '牢头',
     title: '记者',
     links: [
     ]
   },
  {
-    avatar: 'https://www.github.com/deepseek-ai.png',
+    avatar: 'https://github.com/deepseek-ai.png',
     name: '迪西DS',
     title: '数字化记者',
     links: [
       { icon: 'github', link: 'https://github.com/deepseek-ai' },
-      { icon: 'zhihu', link: 'https://www.zhihu.com/org/deepseek-75' },
+      { icon: 'zhihu', link: 'https://zhihu.com/org/deepseek-75' },
     ]
   },
   // 添加更多核心成员...
