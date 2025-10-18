@@ -1,16 +1,16 @@
+import { defineConfig } from 'vitepress';
 import timeline from "vitepress-markdown-timeline";
-import { defineConfig } from 'vitepress'
 const base = '/';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  lastUpdated: true,
   ignoreDeadLinks: true,
   cleanUrls: true,
   head: [['link', { rel: 'icon', href: '/favicon.svg' }]],
   base,
   title: '大树网',
   description: '大树报官方网站',
-  //设置为中文，相当于html标签加lang='zh-CN'
   lang: 'zh-CN',
   locales: {
     '/': {
@@ -25,7 +25,36 @@ export default defineConfig({
   },
   //主题配置
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
+    footer: { 
+      copyright: 'Copyright ©2025 林业集团. all right reserved.', 
+    },
+    search: {
+      provider: 'local',
+      options: {
+        translations: {
+          button: {
+            buttonText: '搜索',
+            buttonAriaLabel: '搜索'
+          },
+          modal: {
+            displayDetails: '显示详细结果列表',
+            noResultsText: '未找到相关结果',
+            resetButtonTitle: '清除查询条件',
+            backButtonTitle: '返回',
+            footer: {
+              selectText: '选择',
+              navigateText: '切换',
+              closeText: '关闭'
+            }
+          }
+        }
+      }
+    },
+    logo: {
+      light: '/light-logo.png',
+      dark: '/dark-logo.png'
+    },
+    siteTitle: false,
     //头上角要主题切换的文字 Appearance
     darkModeSwitchLabel: '切换主题',
     // 文章翻页
@@ -33,10 +62,8 @@ export default defineConfig({
       prev: '上一篇', //Next page
       next: '下一篇', //Previous page
     },
-    //当前页面 On this page
     outlineTitle: '页面内容',
-
-    // 返回顶部 Return to top
+    lastUpdatedText: '最后更新于',
     returnToTopLabel: '返回顶部',
 
     // 菜单  Menu

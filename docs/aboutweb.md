@@ -5,7 +5,7 @@
 本网站部署于 [Github Pages](https://docs.github.com/zh/pages)
 ## 更新日志
 ::: timeline 2025-10-18
-- 添加时间轴
+- 添加时间轴、搜索、最后更新时间，优化logo
 - 更新npm包
 :::
 ::: timeline 2025-10-17
