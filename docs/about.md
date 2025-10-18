@@ -20,7 +20,7 @@ const coreMembers = [
   },
   {
     avatar: 'https://github.com/JustJoy122.png',
-    name: '周围',
+    name: 'JustJoy',
     title: '审校，版面设计，网站维护',
     links: [
       { icon: 'github', link: 'https://github.com/JustJoy122' }
@@ -42,8 +42,8 @@ const coreMembers = [
     ]
   },
   {
-    avatar: '/Khaliltoto.jpg',
-    name: 'Khaliltoto',
+    avatar: '/Khalil4ever.jpg',
+    name: 'Khalil4ever',
     title: '记者，知名人士',
     links: [
     ]
