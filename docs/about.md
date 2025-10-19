@@ -92,7 +92,7 @@ const partners = [
   {
     avatar: '/Gold.jpg',
     name: '绝望的拉子',
-    title: '尊贵的金主',
+    title: '印刷业巨鳄',
     links: [
     ]
   }
