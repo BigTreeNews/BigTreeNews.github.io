@@ -79,7 +79,6 @@ export default defineConfig({
           { text: '第4期', link: '/work/4/' }
         ]
       },
-      {
       { text: '法规', link: '/law' },
       { text: '关于', link: '/about' },
     ],
