@@ -80,13 +80,8 @@ export default defineConfig({
         ]
       },
       {
-        text: '法规',
-        items: [
-          { text: '国法', link: '/law/nation/' },
-          { text: '校规', link: '/law/school/' }
-        ]
-      },
-      { text: '关于', link: '/about' }
+      { text: '法规', link: '/law' },
+      { text: '关于', link: '/about' },
     ],
 
     sidebar: [
