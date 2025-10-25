@@ -2,14 +2,16 @@ import { defineConfig } from "vitepress";
 import llmstxt from "vitepress-plugin-llms";
 import { teekConfig } from "./teekConfig";
 import timeline from "vitepress-markdown-timeline";
+import { createRewrites } from "vitepress-theme-teek/config";
+import Sidebar from "vitepress-plugin-sidebar-resolve";
 
 const description = [
   "欢迎来到大树报",
   "人民群众自己的头版头条",
 ].toString();
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
+  rewrites: createRewrites(),
   extends: teekConfig,
   title: "大树网",
   description: description,
@@ -58,7 +60,7 @@ export default defineConfig({
     },
   },
   sitemap: {
-    hostname: "https://BigTreeNews.github.io", // ** 换成你的域名
+    hostname: "https://BigTreeNews.github.io",
     transformItems: (items) => {
       const permalinkItemBak: typeof items = [];
       // 使用永久链接生成 sitemap
@@ -140,7 +142,12 @@ export default defineConfig({
     },
   },
   vite: {
-    plugins: [llmstxt() as any],
+    plugins: [
+      llmstxt() as any,
+      Sidebar({
+        resolveRule: "rewrites",
+      }),
+    ],
   },
   // transformHtml: (code, id, context) => {
   //   if (context.page !== "404.md") return code;
