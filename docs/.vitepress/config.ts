@@ -143,9 +143,6 @@ export default defineConfig({
   vite: {
     plugins: [
       llmstxt() as any,
-      Sidebar({
-        resolveRule: "rewrites",
-      }),
     ],
   },
   // transformHtml: (code, id, context) => {
