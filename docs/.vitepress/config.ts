@@ -3,7 +3,6 @@ import llmstxt from "vitepress-plugin-llms";
 import { teekConfig } from "./teekConfig";
 import timeline from "vitepress-markdown-timeline";
 import { createRewrites } from "vitepress-theme-teek/config";
-import Sidebar from "vitepress-plugin-sidebar-resolve";
 
 const description = [
   "欢迎来到大树报",
