@@ -136,7 +136,7 @@ export default defineConfig({
     editLink: {
       text: "在 GitHub 上编辑此页",
       pattern:
-        "https://github.com/BigTreeNews/BigTreeNews.github.io/edit/master/docs/:path",
+        "https://github.com/BigTreeNews/BigTreeNews.github.io/edit/main/docs/:path",
     },
   },
   vite: {
