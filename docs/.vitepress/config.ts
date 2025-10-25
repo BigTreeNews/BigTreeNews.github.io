@@ -2,7 +2,6 @@ import { defineConfig } from "vitepress";
 import llmstxt from "vitepress-plugin-llms";
 import { teekConfig } from "./teekConfig";
 import timeline from "vitepress-markdown-timeline";
-import { createRewrites } from "vitepress-theme-teek/config";
 
 const description = [
   "欢迎来到大树报",
@@ -10,7 +9,6 @@ const description = [
 ].toString();
 
 export default defineConfig({
-  rewrites: createRewrites(),
   extends: teekConfig,
   title: "大树网",
   description: description,
