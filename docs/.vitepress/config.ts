@@ -95,10 +95,10 @@ export default defineConfig({
       {
         text: '往期',
         items: [
-          { text: '第1期', link: '/work/1/' },
-          { text: '第2期', link: '/work/2/' },
-          { text: '第3期', link: '/work/3/' },
-          { text: '第4期', link: '/work/4/' }
+          { text: '第1期', link: '/work/1' },
+          { text: '第2期', link: '/work/2' },
+          { text: '第3期', link: '/work/3' },
+          { text: '第4期', link: '/work/4' },
         ]
       },
       { text: '法规', link: '/law' },
@@ -112,6 +112,13 @@ export default defineConfig({
           { text: "分类页", link: "/categories" },
           { text: "标签页", link: "/tags" },
         ],
+      },
+      {
+        text: '文档',
+        items: [
+          { text: '写作排版', link: '/guide/typesetting' },
+          { text: '笔记技巧', link: '/guide/skill' },
+        ]
       },
       { text: '关于', link: '/about/us' },
     ],
