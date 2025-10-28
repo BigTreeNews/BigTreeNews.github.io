@@ -21,6 +21,7 @@ export const teekConfig = defineTeekConfig({
   },
   articleShare: { enabled: true },
   vitePlugins: {
+    autoFrontmatter: true,
     sidebarOption: {
       initItems: false,
     },

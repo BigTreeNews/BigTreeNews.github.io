@@ -6,6 +6,7 @@ import "vitepress-theme-teek/index.css";
 import "vitepress-theme-teek/theme-chalk/tk-code-block-mobile.css"; // 移动端代码块样式优化
 import "vitepress-theme-teek/theme-chalk/tk-sidebar.css"; // 侧边栏优化
 import "vitepress-theme-teek/theme-chalk/tk-nav.css"; // 导航栏优化
+import "vitepress-theme-teek/theme-chalk/tk-nav-blur.css"; // 导航栏毛玻璃样式
 import "vitepress-theme-teek/theme-chalk/tk-aside.css"; // 右侧目栏录文字悬停和激活样式
 import "vitepress-theme-teek/theme-chalk/tk-doc-h1-gradient.css"; // 一级标题渐变色
 import "vitepress-theme-teek/theme-chalk/tk-table.css"; // 表格样式调整，去掉单元格之间的线条
@@ -17,9 +18,9 @@ import "vitepress-theme-teek/theme-chalk/tk-home-card-hover.css"; // 首页卡�
 import "vitepress-theme-teek/theme-chalk/tk-fade-up-animation.css"; // 首次加载的动画效果
 import "vitepress-markdown-timeline/dist/theme/index.css"; // 时间线样式
 
+
 import "./styles/code-bg.scss";
 import "./styles/iframe.scss";
-import "./styles/blur.css"
 
 export default {
   extends: Teek,
