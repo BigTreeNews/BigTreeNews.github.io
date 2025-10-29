@@ -1,7 +1,13 @@
 import { defineTeekConfig } from "vitepress-theme-teek/config";
 import { version } from "vitepress-theme-teek/es/version";
+import timeline from "vitepress-markdown-timeline";
 
 export const teekConfig = defineTeekConfig({
+ markdown: {
+    config: (md) => {
+      md.use(timeline);
+    },
+  },
   teekTheme: true,
   teekHome: false, // 是否开启博客首页
   vpHome: true, // 是否隐藏 VP 首页

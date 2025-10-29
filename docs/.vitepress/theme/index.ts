@@ -1,5 +1,6 @@
 import Teek from "vitepress-theme-teek";
 import TeekLayoutProvider from "./components/TeekLayoutProvider.vue";
+import "vitepress-markdown-timeline/dist/theme/index.css"; // 时间线样式
 
 // Teek 在线主题包引用（需安装 Teek 在线版本）
 import "vitepress-theme-teek/index.css";
@@ -16,7 +17,7 @@ import "vitepress-theme-teek/theme-chalk/tk-index-rainbow.css"; // 首页图片�
 import "vitepress-theme-teek/theme-chalk/tk-banner-desc-gradient.css"; // 博客风格 Banner 描述渐变样式
 import "vitepress-theme-teek/theme-chalk/tk-home-card-hover.css"; // 首页卡片悬停效果
 import "vitepress-theme-teek/theme-chalk/tk-fade-up-animation.css"; // 首次加载的动画效果
-import "vitepress-markdown-timeline/dist/theme/index.css"; // 时间线样式
+
 
 
 import "./styles/code-bg.scss";

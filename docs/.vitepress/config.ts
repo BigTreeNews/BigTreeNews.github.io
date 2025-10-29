@@ -1,7 +1,7 @@
 import { defineConfig } from "vitepress";
 import llmstxt from "vitepress-plugin-llms";
 import { teekConfig } from "./teekConfig";
-import timeline from "vitepress-markdown-timeline";
+
 
 const description = [
   "欢迎来到大树报",
@@ -38,9 +38,6 @@ export default defineConfig({
     ["meta", { name: "keywords", description }],
   ],
   markdown: {
-    config: (md) => {
-      md.use(timeline);
-    },
     // 开启行号
     lineNumbers: true,
     image: {
