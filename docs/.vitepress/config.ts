@@ -96,6 +96,7 @@ export default defineConfig({
           { text: '第2期', link: '/work/2' },
           { text: '第3期', link: '/work/3' },
           { text: '第4期', link: '/work/4' },
+          { text: '第5期', link: '/work/5' },
         ]
       },
       { text: '法规', link: '/law' },
