@@ -3,6 +3,11 @@ import { version } from "vitepress-theme-teek/es/version";
 import timeline from "vitepress-markdown-timeline";
 
 export const teekConfig = defineTeekConfig({
+  themeEnhance: {
+    spotlight: {
+      defaultValue: true,
+    },
+  },
  markdown: {
     config: (md) => {
       md.use(timeline);
@@ -12,7 +17,7 @@ export const teekConfig = defineTeekConfig({
   teekHome: false, // 是否开启博客首页
   vpHome: true, // 是否隐藏 VP 首页
   sidebarTrigger: true, // 是否开启侧边栏折叠功能
-  author: { name: "JustJoy", link: "https://github.com/JustJoy122" },
+  author: { name: "大树报编辑部", link: "https://github.com/BigTreeNews" },
   footerInfo: {
     theme: {
       name: `基于Vitepress Theme Teek@${version}`,
