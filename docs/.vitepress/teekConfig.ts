@@ -17,7 +17,7 @@ export const teekConfig = defineTeekConfig({
   teekHome: false, // 是否开启博客首页
   vpHome: true, // 是否隐藏 VP 首页
   sidebarTrigger: true, // 是否开启侧边栏折叠功能
-  author: { name: "大树报编辑部", link: "https://github.com/BigTreeNews" },
+  author: { name: "大树报编辑部", link: "/about/us" },
   footerInfo: {
     theme: {
       name: `基于Vitepress Theme Teek@${version}`,
