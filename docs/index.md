@@ -1,6 +1,8 @@
 ---
 layout: home
 
+tk:
+  teekHome: false
 hero:
   image:
       src: favicon.svg
@@ -21,10 +23,6 @@ features:
     details: 5期
     link: /work
     linkText: 了解更多
-  - title: 字符数量
-    details: 9216字（不含第5期），全部由编辑部成员完成
-  - title: 图片数量
-    details: 43张，来源涵盖人民教育出版社、湖南教育出版社、官方媒体、自主拍摄
 ---
 ::: warning 最新消息
 在金主 绝望的拉子 的无偿支持下，《大树报》从理论到实践，从电子版到纸质版，实现质的飞跃，热烈庆祝
