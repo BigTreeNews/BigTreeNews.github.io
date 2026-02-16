@@ -54,7 +54,7 @@ export default defineConfig({
     },
   },
   sitemap: {
-    hostname: "https://BigTreeNews.github.io",
+    hostname: "https://BigTree.qzz.io",
     transformItems: (items) => {
       const permalinkItemBak: typeof items = [];
       // 使用永久链接生成 sitemap
