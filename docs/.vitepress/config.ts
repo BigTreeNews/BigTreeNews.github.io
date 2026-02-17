@@ -121,7 +121,13 @@ export default defineConfig({
           { text: '笔记技巧', link: '/guide/skill' },
         ]
       },
-      { text: '关于', link: '/about/us' },
+      {
+        text: '关于',
+        items: [
+          { text: '大树报', link: '/about/us' },
+          { text: '大树网', link: '/about/web' },
+        ]
+      },
     ],
     socialLinks: [
       {
