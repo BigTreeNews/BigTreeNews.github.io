@@ -88,9 +88,9 @@ export default defineConfig({
       next: "下一页",
     },
     nav: [
-      { text: '首页', link: '/' },
+      { text: '🏡 首页', link: '/' },
       {
-        text: '往期',
+        text: '📜 往期',
         items: [
           { text: '第1期', link: '/work/1' },
           { text: '第2期', link: '/work/2' },
@@ -102,30 +102,28 @@ export default defineConfig({
           { text: '第8期', link: '/work/8' },
         ]
       },
-      { text: '法规', link: '/law' },
+      { text: '📚 法规', link: '/law' },
       {
-        text: "功能页",
+        text: "👏 索引",
         items: [
-          { text: "归档页", link: "/archives" },
-          { text: "清单页", link: "/articleOverview" },
-          { text: "登录页", link: "/login" },
-          { text: "风险链接提示页", link: "/risk-link?target=https://vp.teek.top" },
-          { text: "分类页", link: "/categories" },
-          { text: "标签页", link: "/tags" },
+          { text: "📚 归档页", link: "/archives" },
+          { text: "📋 清单页", link: "/articleOverview" },
+          { text: "📃 分类页", link: "/categories" },
+          { text: "🔖 标签页", link: "/tags" },
         ],
       },
       {
-        text: '文档',
+        text: '💡 文档',
         items: [
-          { text: '写作排版', link: '/guide/typesetting' },
-          { text: '笔记技巧', link: '/guide/skill' },
+          { text: '📝 写作排版', link: '/guide/typesetting' },
+          { text: '🖊 笔记技巧', link: '/guide/skill' },
         ]
       },
       {
-        text: '关于',
+        text: '🍷 关于',
         items: [
-          { text: '大树报', link: '/about/us' },
-          { text: '大树网', link: '/about/web' },
+          { text: '👋 大树报', link: '/about/us' },
+          { text: '🎉 大树网', link: '/about/web' },
         ]
       },
     ],
