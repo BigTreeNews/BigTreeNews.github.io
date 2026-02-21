@@ -20,7 +20,7 @@ hero:
 
 features:
   - title: 发行数量
-    details: 8期
+    details: 8️⃣期
     link: /work
     linkText: 了解更多
 ---

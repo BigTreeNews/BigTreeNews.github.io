@@ -54,7 +54,7 @@ export default defineConfig({
     },
   },
   sitemap: {
-    hostname: "http://BigTreeNews.github.io/",
+    hostname: "https://BigTreeNews.github.io/",
     transformItems: (items) => {
       const permalinkItemBak: typeof items = [];
       // 使用永久链接生成 sitemap
@@ -92,14 +92,14 @@ export default defineConfig({
       {
         text: '📜 往期',
         items: [
-          { text: '第1期', link: '/work/1' },
-          { text: '第2期', link: '/work/2' },
-          { text: '第3期', link: '/work/3' },
-          { text: '第4期', link: '/work/4' },
-          { text: '第5期', link: '/work/5' },
-          { text: '第6期', link: '/work/6' },
-          { text: '第7期', link: '/work/7' },
-          { text: '第8期', link: '/work/8' },
+          { text: '第1️⃣期', link: '/work/1' },
+          { text: '第2️⃣期', link: '/work/2' },
+          { text: '第3️⃣期', link: '/work/3' },
+          { text: '第4️⃣期', link: '/work/4' },
+          { text: '第5️⃣期', link: '/work/5' },
+          { text: '第6️⃣期', link: '/work/6' },
+          { text: '第7️⃣期', link: '/work/7' },
+          { text: '第8️⃣期', link: '/work/8' },
         ]
       },
       { text: '📚 法规', link: '/law' },
