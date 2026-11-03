@@ -1,0 +1,3 @@
+# 补丁文件必须保持 LF：pnpm patch 按行匹配上下文，
+# 在 core.autocrlf=true 的 Windows 上若被转成 CRLF，应用补丁可能失败。
+patches/*.patch text eol=lf
