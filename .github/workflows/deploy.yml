@@ -1,13 +1,11 @@
 name: Deploy Pages
 
-# 触发条件，push到main分支或者pull request到main分支
+# 触发条件：push 到 main、向 main 提 PR、或手动触发
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
-
-  # 支持手动在工作流上触发
   workflow_dispatch:
 
 # 设置时区
@@ -16,82 +14,65 @@ env:
 
 # 权限设置
 permissions:
-  # 允许读取仓库内容的权限。
+  # 允许读取仓库内容
   contents: read
-  # 允许写入 GitHub Pages 的权限。
+  # 允许写入 GitHub Pages
   pages: write
-  # 允许写入 id-token 的权限。
+  # 允许写入 id-token（deploy-pages 需要）
   id-token: write
 
-# 并发控制配置
+# 并发控制：同一时刻只部署一次，不取消进行中的部署
 concurrency:
   group: pages
   cancel-in-progress: false
 
-# 定义执行任务
 jobs:
   # 构建任务
   build:
-
     runs-on: ubuntu-latest
-
-    # node v20 运行
-    strategy:
-      matrix:
-        node-version: [20]
-
     steps:
-      # 拉取代码
+      # 拉取代码（保留完整历史，VitePress 的 lastUpdated 需要 git 历史）
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
         with:
-          # 保留 Git 信息
           fetch-depth: 0
 
-      # 设置使用 Node.js 版本
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      # 设置 Node.js 22 LTS
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: "22"
 
-      # 使用 最新的 PNPM
-      # 你也可以指定为具体的版本
-      - uses: pnpm/action-setup@v2
-        name: Install pnpm
+      # 安装并锁定 pnpm 12.16.1（与 package.json 的 packageManager 一致）
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
         with:
-          version: latest
-          # version: 9
+          version: "12.16.1"
           run_install: false
 
-        # 安装依赖
+      # 安装依赖（严格按 lockfile，lockfile 与 package.json 不一致时直接失败）
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
-        # 构建项目
-      - name: Build blog project
-        run: |
-          echo ${{ github.workspace }}
-          pnpm docs:build
+      # 构建 VitePress 站点，产物输出到 docs/.vitepress/dist
+      - name: Build docs
+        run: pnpm docs:build
 
-        # 资源拷贝
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./docs/.vitepress/dist
-          destination: ./_site
-
-        # 上传 _site 的资源，用于后续部署
+      # 上传构建产物，供 deploy job 部署
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: docs/.vitepress/dist
 
-  # 部署任务
+  # 部署任务（PR 只跑构建校验，不部署，避免 PR 上因 Pages 环境权限失败）
   deploy:
+    needs: build
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

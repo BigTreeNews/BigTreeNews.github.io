@@ -1,0 +1,5 @@
+# pnpm 11+ 起，构建脚本白名单从 package.json 的 "pnpm.onlyBuiltDependencies"
+# 迁移到本文件的 "allowBuilds"（package.json 里的旧字段已被忽略）。
+allowBuilds:
+  esbuild: true
+  "@parcel/watcher": true
