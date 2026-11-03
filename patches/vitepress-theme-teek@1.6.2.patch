@@ -1,0 +1,38 @@
+diff --git a/es/components/common/article-page/src/components/outline.mjs b/es/components/common/article-page/src/components/outline.mjs
+index 4ee813c4585faa10e24ebfd42d7cde7545c2edcb..43fb67a0d720cb7e16e43871f6c0b947400d325d 100644
+--- a/es/components/common/article-page/src/components/outline.mjs
++++ b/es/components/common/article-page/src/components/outline.mjs
+@@ -1,4 +1,32 @@
+-import { getScrollOffset } from 'vitepress';
++// PATCH (VitePress 2 compat): VitePress 2 no longer exports `getScrollOffset`,
++// so re-implement the VitePress 1.6 behaviour locally (site scrollOffset config).
++const tryOffsetSelector = (selector, padding) => {
++  const el = selector === "html" ? document.documentElement : document.querySelector(selector);
++  if (!el) return 0;
++  return el.offsetHeight + padding;
++};
++const getScrollOffset = () => {
++  const themeConfig = (typeof window !== "undefined" && window.__VP_SITE_DATA__ && window.__VP_SITE_DATA__.themeConfig) || {};
++  let scrollOffset = themeConfig.scrollOffset;
++  let offset = 0;
++  let padding = 24;
++  if (typeof scrollOffset === "object" && scrollOffset && "padding" in scrollOffset) {
++    padding = scrollOffset.padding;
++    scrollOffset = scrollOffset.selector;
++  }
++  if (typeof scrollOffset === "number") offset = scrollOffset;
++  else if (typeof scrollOffset === "string") offset = tryOffsetSelector(scrollOffset, padding);
++  else if (Array.isArray(scrollOffset)) {
++    for (const selector of scrollOffset) {
++      const res = tryOffsetSelector(selector, padding);
++      if (res) {
++        offset = res;
++        break;
++      }
++    }
++  }
++  return offset;
++};
+ import { onMounted, onUpdated, onUnmounted } from 'vue';
+ import { useNamespace } from '../../../../../composables/use-namespace.mjs';
+ import 'vitepress-theme-teek/theme-chalk/tk-copy-banner.css';

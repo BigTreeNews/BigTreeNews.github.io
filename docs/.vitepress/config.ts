@@ -42,7 +42,8 @@ export default defineConfig({
     lineNumbers: true,
     image: {
       // 默认禁用；设置为 true 可为所有图片启用懒加载。
-      lazyLoading: false,
+      // VitePress 2 重命名：lazyLoading -> lazyLoad
+      lazyLoad: false,
     },
     // 更改容器默认值标题
     container: {
@@ -78,7 +79,6 @@ export default defineConfig({
     darkModeSwitchLabel: "主题",
     sidebarMenuLabel: "菜单",
     returnToTopLabel: "返回顶部",
-    lastUpdatedText: "上次更新时间",
     outline: {
       level: [2, 4],
       label: "本页导航",

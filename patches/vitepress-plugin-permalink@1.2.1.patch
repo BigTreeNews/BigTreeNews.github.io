@@ -1,0 +1,20 @@
+diff --git a/dist/index.mjs b/dist/index.mjs
+index 09e77918f869b5af6f5a2f2ef0a9d9a6c437f691..4211e2a7bf127b83b5b3bc798d69b0ef485767bd 100644
+--- a/dist/index.mjs
++++ b/dist/index.mjs
+@@ -141,13 +141,13 @@ function VitePluginVitePressUsePermalink(option = {}) {
+         const code = readFileSync(id, "utf-8");
+         const slotName = "not-found";
+         const notFoundSlotPosition = `<slot name="${slotName}" />`;
+-        const setupPosition = '<script setup lang="ts">';
++        const setupPosition = /<script setup[^>]*>/;
+         return code.replace(
+           notFoundSlotPosition,
+           `<${NotFoundDelayComponentName}><template #${slotName}>${notFoundSlotPosition}</template></${NotFoundDelayComponentName}>`
+         ).replace(
+           setupPosition,
+-          `${setupPosition}
++          (tag) => `${tag}
+ import ${usePermalinkFile} from './${usePermalinkFile}'
+ import ${NotFoundDelayComponentName} from './${NotFoundDelayComponentFile}'`
+         ).replace("<\/script>", `${usePermalinkFile}().startWatch() <\/script>`);

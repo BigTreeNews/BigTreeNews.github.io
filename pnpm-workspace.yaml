@@ -3,3 +3,11 @@
 allowBuilds:
   esbuild: true
   "@parcel/watcher": true
+
+# VitePress 2 兼容补丁（上游未支持，升级 vitepress 时必须同步维护这两个 patch）：
+# - vitepress-theme-teek：getScrollOffset 在 VitePress 2 已移除，本地补回等价实现
+# - vitepress-plugin-permalink：向默认主题 Layout.vue 注入代码时锚点写死了
+#   '<script setup lang="ts">'，VitePress 2 的 Layout.vue 是 '<script setup>'，改为正则锚点
+patchedDependencies:
+  vitepress-theme-teek@1.6.2: patches/vitepress-theme-teek@1.6.2.patch
+  vitepress-plugin-permalink@1.2.1: patches/vitepress-plugin-permalink@1.2.1.patch

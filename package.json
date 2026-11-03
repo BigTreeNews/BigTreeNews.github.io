@@ -6,7 +6,7 @@
   "type": "module",
   "packageManager": "pnpm@12.16.1",
   "engines": {
-    "node": ">=20"
+    "node": ">=22.12.0"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
@@ -16,7 +16,7 @@
   "devDependencies": {
     "echarts": "^6.1.0",
     "sass": "^1.107.1",
-    "vitepress": "^1.6.4",
+    "vitepress": "2.0.0-alpha.21",
     "vitepress-plugin-llms": "^1.14.0",
     "vitepress-theme-teek": "^1.6.2"
   },
